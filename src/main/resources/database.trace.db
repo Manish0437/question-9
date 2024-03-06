@@ -1,0 +1,560 @@
+2024-03-06 06:11:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HOTEL" not found (this database is empty); SQL statement:
+select hotel0_.id as id1_0_, hotel0_.name as name2_0_, hotel0_.location as location3_0_, hotel0_.rating as rating4_0_ from hotel hotel0_ [42104-214]
+2024-03-06 06:11:51 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HOTEL" not found (this database is empty); SQL statement:
+select hotel0_.id as id1_0_, hotel0_.name as name2_0_, hotel0_.location as location3_0_, hotel0_.rating as rating4_0_ from hotel hotel0_ [42104-214]
+2024-03-06 06:11:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HOTEL" not found (this database is empty); SQL statement:
+select hotel0_.id as id1_0_, hotel0_.name as name2_0_, hotel0_.location as location3_0_, hotel0_.rating as rating4_0_ from hotel hotel0_ [42104-214]
+2024-03-06 06:12:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HOTEL" not found (this database is empty); SQL statement:
+select hotel0_.id as id1_0_, hotel0_.name as name2_0_, hotel0_.location as location3_0_, hotel0_.rating as rating4_0_ from hotel hotel0_ [42104-214]
+2024-03-06 06:12:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HOTEL" not found (this database is empty); SQL statement:
+select hotel0_.id as id1_0_0_, hotel0_.name as name2_0_0_, hotel0_.location as location3_0_0_, hotel0_.rating as rating4_0_0_ from hotel hotel0_ where hotel0_.id=? [42104-214]
+2024-03-06 06:12:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "ROOM" not found (this database is empty); SQL statement:
+select room0_.id as id1_1_, room0_.hotelid as hotelid5_1_, room0_.price as price2_1_, room0_.roomnumber as roomnumb3_1_, room0_.type as type4_1_ from room room0_ [42104-214]
+2024-03-06 06:13:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "HOTEL" not found (this database is empty); SQL statement:
+select hotel0_.id as id1_0_, hotel0_.name as name2_0_, hotel0_.location as location3_0_, hotel0_.rating as rating4_0_ from hotel hotel0_ [42104-214]
+2024-03-06 06:17:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table hotel (\000d\000a    id INTEGER PRIMARY KEY [*]AUTOINCREMENT,\000d\000a    name varchar(255),\000d\000a    location varchar(255),\000d\000a    rating INTEGER\000d\000a)"; expected "HASH, CONSTRAINT, COMMENT, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+create table hotel (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name varchar(255),
+    location varchar(255),
+    rating INTEGER
+) [42001-214]
+2024-03-06 06:17:40 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table room (\000d\000a    id INTEGER PRIMARY KEY [*]AUTOINCREMENT,\000d\000a    roomNumber varchar(255),\000d\000a    type varchar(255),\000d\000a    price DOUBLE,\000d\000a    hotelId INTEGER,\000d\000a    FOREIGN KEY (hotelId) REFERENCES Hotel(id)\000d\000a)"; expected "HASH, CONSTRAINT, COMMENT, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+create table room (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    roomNumber varchar(255),
+    type varchar(255),
+    price DOUBLE,
+    hotelId INTEGER,
+    FOREIGN KEY (hotelId) REFERENCES Hotel(id)
+) [42001-214]
+2024-03-06 06:17:51 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "create table hotel (\000d\000a    id INTEGER PRIMARY KEY [*]AUTOINCREMENT,\000d\000a    name varchar(255),\000d\000a    location varchar(255),\000d\000a    rating INTEGER\000d\000a)"; expected "HASH, CONSTRAINT, COMMENT, UNIQUE, NOT NULL, NULL, CHECK, REFERENCES, AUTO_INCREMENT, ,, )"; SQL statement:
+create table hotel (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name varchar(255),
+    location varchar(255),
+    rating INTEGER
+) [42001-214]
+2024-03-06 06:18:41 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "-- Insert data into Hotel table\000d\000aINSERT INTO Hotel (name, location, rating)\000d\000aVALUES ('The Plaza Hotel', 'New York', 4),\000d\000aINSERT [*]INTO Hotel (name, location, rating)\000d\000aVALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),\000d\000aINSERT INTO Hotel (name, location, rating)\000d\000aVALUES ('The Langham', 'Chicago', 3)"; SQL statement:
+-- Insert data into Hotel table
+INSERT INTO Hotel (name, location, rating)
+VALUES ('The Plaza Hotel', 'New York', 4),
+INSERT INTO Hotel (name, location, rating)
+VALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),
+INSERT INTO Hotel (name, location, rating)
+VALUES ('The Langham', 'Chicago', 3) [42000-214]
+2024-03-06 06:18:41 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "-- Insert data into Room table\000d\000aINSERT INTO Room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-101', 'Deluxe Room', 375.00, 1),\000d\000aINSERT [*]INTO Room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-205', 'Suite', 950.00, 1),\000d\000aINSERT INTO Room (roomNumber, type, price, hotelId)\000d\000aVALUES ('B-106', 'Penthouse Suite', 2500.00, 1),\000d\000aINSERT INTO Room (roomNumber, type, price, hotelId)\000d\000aVALUES ('C-401', 'Superior Guest Room', 465.00, 2),\000d\000aINSERT INTO Room (roomNumber, type, price, hotelId)\000d\000aVALUES ('D-202', 'Bungalow', 1250.00, 2),\000d\000aINSERT INTO Room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-107', 'Penthouse Suite', 3300.00, 2),\000d\000aINSERT INTO Room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-301', 'Grand Room', 410.00, 3),\000d\000aINSERT INTO Room (roomNumber, type, price, hotelId)\000d\000aVALUES ('C-313', 'Executive Suite', 700.00, 3),\000d\000aINSERT INTO Room (roomNumber, type, price, hotelId)\000d\000aVALUES ('D-404', 'Premier Suite', 880.00, 3)"; SQL statement:
+-- Insert data into Room table
+INSERT INTO Room (roomNumber, type, price, hotelId)
+VALUES ('A-101', 'Deluxe Room', 375.00, 1),
+INSERT INTO Room (roomNumber, type, price, hotelId)
+VALUES ('A-205', 'Suite', 950.00, 1),
+INSERT INTO Room (roomNumber, type, price, hotelId)
+VALUES ('B-106', 'Penthouse Suite', 2500.00, 1),
+INSERT INTO Room (roomNumber, type, price, hotelId)
+VALUES ('C-401', 'Superior Guest Room', 465.00, 2),
+INSERT INTO Room (roomNumber, type, price, hotelId)
+VALUES ('D-202', 'Bungalow', 1250.00, 2),
+INSERT INTO Room (roomNumber, type, price, hotelId)
+VALUES ('A-107', 'Penthouse Suite', 3300.00, 2),
+INSERT INTO Room (roomNumber, type, price, hotelId)
+VALUES ('A-301', 'Grand Room', 410.00, 3),
+INSERT INTO Room (roomNumber, type, price, hotelId)
+VALUES ('C-313', 'Executive Suite', 700.00, 3),
+INSERT INTO Room (roomNumber, type, price, hotelId)
+VALUES ('D-404', 'Premier Suite', 880.00, 3) [42000-214]
+2024-03-06 06:18:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "-- Insert data into Hotel table\000d\000aINSERT INTO Hotel (name, location, rating)\000d\000aVALUES ('The Plaza Hotel', 'New York', 4),\000d\000aINSERT [*]INTO Hotel (name, location, rating)\000d\000aVALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),\000d\000aINSERT INTO Hotel (name, location, rating)\000d\000aVALUES ('The Langham', 'Chicago', 3)"; SQL statement:
+-- Insert data into Hotel table
+INSERT INTO Hotel (name, location, rating)
+VALUES ('The Plaza Hotel', 'New York', 4),
+INSERT INTO Hotel (name, location, rating)
+VALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),
+INSERT INTO Hotel (name, location, rating)
+VALUES ('The Langham', 'Chicago', 3) [42000-214]
+2024-03-06 06:19:05 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO Hotel (name, location, rating)\000d\000aVALUES ('The Plaza Hotel', 'New York', 4),\000d\000aINSERT [*]INTO Hotel (name, location, rating)\000d\000aVALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),\000d\000aINSERT INTO Hotel (name, location, rating)\000d\000aVALUES ('The Langham', 'Chicago', 3)"; SQL statement:
+INSERT INTO Hotel (name, location, rating)
+VALUES ('The Plaza Hotel', 'New York', 4),
+INSERT INTO Hotel (name, location, rating)
+VALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),
+INSERT INTO Hotel (name, location, rating)
+VALUES ('The Langham', 'Chicago', 3) [42000-214]
+2024-03-06 06:19:27 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO hotel (name, location, rating)\000d\000aVALUES ('The Plaza Hotel', 'New York', 4),\000d\000aINSERT [*]INTO hotel (name, location, rating)\000d\000aVALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),\000d\000aINSERT INTO hotel (name, location, rating)\000d\000aVALUES ('The Langham', 'Chicago', 3)"; SQL statement:
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Plaza Hotel', 'New York', 4),
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Langham', 'Chicago', 3) [42000-214]
+2024-03-06 06:20:08 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO hotel (name, location, rating)\000d\000aVALUES ('The Plaza Hotel', 'New York', 4),\000d\000aINSERT [*]INTO hotel (name, location, rating)\000d\000aVALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),\000d\000aINSERT INTO hotel (name, location, rating)\000d\000aVALUES ('The Langham', 'Chicago', 3)"; SQL statement:
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Plaza Hotel', 'New York', 4),
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Langham', 'Chicago', 3) [42000-214]
+2024-03-06 06:20:31 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "HOTEL" because "CONSTRAINT_26" depends on it; SQL statement:
+drop table HOTEL [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2024-03-06 06:20:39 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "HOTEL" because "CONSTRAINT_26" depends on it; SQL statement:
+drop table hotel [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2024-03-06 06:20:49 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "HOTEL" because "CONSTRAINT_26" depends on it; SQL statement:
+drop table hotel [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2024-03-06 06:21:12 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "delete [*]table hotel"; expected "identifier"; SQL statement:
+delete table hotel [42001-214]
+2024-03-06 06:21:23 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "HOTEL" because "CONSTRAINT_26" depends on it; SQL statement:
+DROP TABLE HOTEL [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2024-03-06 06:22:08 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "HOTEL" because "CONSTRAINT_26" depends on it; SQL statement:
+DROP TABLE IF EXISTS HOTEL [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2024-03-06 06:22:08 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "HOTEL" because "CONSTRAINT_26" depends on it; SQL statement:
+DROP TABLE IF EXISTS HOTEL [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2024-03-06 06:22:10 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Cannot drop "HOTEL" because "CONSTRAINT_26" depends on it; SQL statement:
+DROP TABLE IF EXISTS HOTEL [90107-214]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:632)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.command.ddl.DropTable.prepareDrop(DropTable.java:97)
+	at org.h2.command.ddl.DropTable.update(DropTable.java:121)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:169)
+	at org.h2.command.Command.executeUpdate(Command.java:252)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:252)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1339)
+	at org.h2.server.web.WebApp.query(WebApp.java:1137)
+	at org.h2.server.web.WebApp.query(WebApp.java:1113)
+	at org.h2.server.web.WebApp.process(WebApp.java:244)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:176)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:696)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:750)
+2024-03-06 06:23:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "-- Insert data into Hotel table\000d\000aINSERT INTO hotel (name, location, rating)\000d\000aVALUES ('The Plaza Hotel', 'New York', 4),\000d\000aINSERT [*]INTO hotel (name, location, rating)\000d\000aVALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),\000d\000aINSERT INTO hotel (name, location, rating)\000d\000aVALUES ('The Langham', 'Chicago', 3)"; SQL statement:
+-- Insert data into Hotel table
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Plaza Hotel', 'New York', 4),
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Langham', 'Chicago', 3) [42000-214]
+2024-03-06 06:23:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "-- Insert data into Room table\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-101', 'Deluxe Room', 375.00, 1),\000d\000aINSERT [*]INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-205', 'Suite', 950.00, 1),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('B-106', 'Penthouse Suite', 2500.00, 1),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('C-401', 'Superior Guest Room', 465.00, 2),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('D-202', 'Bungalow', 1250.00, 2),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-107', 'Penthouse Suite', 3300.00, 2),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-301', 'Grand Room', 410.00, 3),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('C-313', 'Executive Suite', 700.00, 3),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('D-404', 'Premier Suite', 880.00, 3)"; SQL statement:
+-- Insert data into Room table
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('A-101', 'Deluxe Room', 375.00, 1),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('A-205', 'Suite', 950.00, 1),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('B-106', 'Penthouse Suite', 2500.00, 1),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('C-401', 'Superior Guest Room', 465.00, 2),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('D-202', 'Bungalow', 1250.00, 2),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('A-107', 'Penthouse Suite', 3300.00, 2),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('A-301', 'Grand Room', 410.00, 3),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('C-313', 'Executive Suite', 700.00, 3),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('D-404', 'Premier Suite', 880.00, 3) [42000-214]
+2024-03-06 06:23:25 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "-- Insert data into Hotel table\000d\000aINSERT INTO hotel (name, location, rating)\000d\000aVALUES ('The Plaza Hotel', 'New York', 4),\000d\000aINSERT [*]INTO hotel (name, location, rating)\000d\000aVALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),\000d\000aINSERT INTO hotel (name, location, rating)\000d\000aVALUES ('The Langham', 'Chicago', 3)"; SQL statement:
+-- Insert data into Hotel table
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Plaza Hotel', 'New York', 4),
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Langham', 'Chicago', 3) [42000-214]
+2024-03-06 06:23:25 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "-- Insert data into Room table\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-101', 'Deluxe Room', 375.00, 1),\000d\000aINSERT [*]INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-205', 'Suite', 950.00, 1),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('B-106', 'Penthouse Suite', 2500.00, 1),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('C-401', 'Superior Guest Room', 465.00, 2),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('D-202', 'Bungalow', 1250.00, 2),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-107', 'Penthouse Suite', 3300.00, 2),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('A-301', 'Grand Room', 410.00, 3),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('C-313', 'Executive Suite', 700.00, 3),\000d\000aINSERT INTO room (roomNumber, type, price, hotelId)\000d\000aVALUES ('D-404', 'Premier Suite', 880.00, 3)"; SQL statement:
+-- Insert data into Room table
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('A-101', 'Deluxe Room', 375.00, 1),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('A-205', 'Suite', 950.00, 1),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('B-106', 'Penthouse Suite', 2500.00, 1),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('C-401', 'Superior Guest Room', 465.00, 2),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('D-202', 'Bungalow', 1250.00, 2),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('A-107', 'Penthouse Suite', 3300.00, 2),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('A-301', 'Grand Room', 410.00, 3),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('C-313', 'Executive Suite', 700.00, 3),
+INSERT INTO room (roomNumber, type, price, hotelId)
+VALUES ('D-404', 'Premier Suite', 880.00, 3) [42000-214]
+2024-03-06 06:23:45 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "-- Insert data into Hotel table\000d\000aINSERT INTO hotel (name, location, rating)\000d\000aVALUES ('The Plaza Hotel', 'New York', 4),\000d\000aINSERT [*]INTO hotel (name, location, rating)\000d\000aVALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),\000d\000aINSERT INTO hotel (name, location, rating)\000d\000aVALUES ('The Langham', 'Chicago', 3)"; SQL statement:
+-- Insert data into Hotel table
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Plaza Hotel', 'New York', 4),
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Beverly Hills Hotel', 'Los Angeles', 5),
+INSERT INTO hotel (name, location, rating)
+VALUES ('The Langham', 'Chicago', 3) [42000-214]
